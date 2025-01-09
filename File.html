@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto The Explorer</title>
+    <link rel="icon" href="Style/Image/RKS.png">
+    <link rel="stylesheet" href="Style/CSS/file.css">
+</head>
+<body>
+    <header>
+        <h1>File Enkripsi & Dekripsi</h1>
+    </header>
+    <main>
+        <section id="encryption-section">
+            <h2>Enkripsi File</h2>
+            <input type="file" id="encryptFile" accept=".txt,.jpg,.png,.jpeg,.doc,.xls,.ppt,.pdf,.zip,.mp3,.mp4,.exe,.iso,.avi" />
+            <input type="password" id="encryptPassword" placeholder="Masukkan Password Enkripsi" />
+            <button onclick="encryptFile()">Enkripsi</button>
+            <div class="output" id="encryptOutput"></div>
+        </section>
+
+        <section id="decryption-section">
+            <h2>Dekripsi File</h2>
+            <input type="file" id="decryptFile" accept=".aes" />
+            <input type="password" id="decryptPassword" placeholder="Masukkan Password Dekripsi" />
+            <button onclick="decryptFile()">Dekripsi</button>
+            <div class="output" id="decryptOutput"></div>
+        </section>
+    </main>
+
+    <button id="backBtn" onclick="goHome()">Home</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="Style/JS/file.js"></script>
+</body>
+</html>

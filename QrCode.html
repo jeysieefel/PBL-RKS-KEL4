@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto The Explorer</title>
+    <link rel="icon" href="Style/Image/RKS.png">
+    <link rel="stylesheet" href="Style/CSS/qrcode.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script> <!-- Library untuk pemindaian QR -->
+</head>
+<body>
+    <header>
+        <h1>🌳 QR Code Rahasia 🌲</h1>
+        <p>Membuat QR Code dengan data terenkripsi.</p>
+    </header>
+    
+    <div class="container">
+        <div class="form-group">
+            <label for="dataInput">Masukkan Data (URL atau Teks):</label>
+            <textarea id="dataInput" rows="4" placeholder="Masukkan data yang akan dienkripsi"></textarea>
+        </div>
+        <!-- Input untuk Kunci Enkripsi -->
+        <div class="form-group">
+            <label for="keyInput">Masukkan Kunci Enkripsi (8 karakter):</label>
+            <input type="text" id="keyInput" placeholder="Kunci Enkripsi (8 karakter)" maxlength="8">
+        </div>
+        <!-- Tombol untuk Generate QR Code -->
+        <button id="generateButton">Generate QR Code</button>
+
+        <!-- Tempat untuk Menampilkan QR Code -->
+        <div class="qr-code-container">
+            <h3>QR Code Anda:</h3>
+            <canvas id="qrCode"></canvas> <!-- QR Code akan ditampilkan di sini -->
+            <br>
+            <!-- Tombol untuk Unduh QR Code -->
+            <a id="downloadLink" href="#" download="qr-code.png">
+                <button id="downloadButton" style="display:none;">Download QR Code</button>
+            </a>
+        </div>
+
+        <!-- Pemindaian QR Code -->
+        <div class="form-group">
+            <label for="scannerInput">Pindai QR Code untuk Dekripsi:</label>
+            <button id="scanButton">Mulai Pemindaian</button>
+            <div id="scannerContainer" style="display:none; width: 300px; height: 300px;">
+                <!-- Kamera akan ditampilkan di sini -->
+            </div>
+            
+        </div>
+
+        <!-- Hasil Dekripsi -->
+        <div class="result-container">
+            <h3>Hasil Dekripsi:</h3>
+            <p id="decryptedText">Tunggu hingga QR Code dipindai...</p>
+        </div>
+    </div>
+
+    <button id="backButton" onclick="goHome()">Home</button>
+
+<!-- Impor library html5-qrcode -->
+<script src="https://cdn.jsdelivr.net/npm/html5-qrcode/html5-qrcode.min.js"></script>
+
+
+
+<!-- Skrip khusus Anda -->
+<script src="Style/JS/qrcode.js"></script>
+
+
+</body>
+</html>

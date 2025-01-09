@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/ca/7d/57/ca7d5760efa1edd4308ad0ec5fbe1fdc.gif'); /* Gambar latar belakang hutan */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundMove 10s infinite alternate; /* Efek gerakan latar belakang */
+}
+
+header {
+    background: linear-gradient(45deg, #16a085, #2ecc71);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: lightPulse 3s infinite alternate; /* Efek cahaya yang berdenyut */
+}
+
+@keyframes lightPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(0, 255, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(0, 255, 0, 0.6);
+    }
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    animation: sway 4s ease-in-out infinite; /* Efek gerakan lembut pada konten utama */
+}
+
+section {
+    width: 35%;
+    min-width: 300px;
+    padding: 1.5rem;
+    background: rgba(39, 174, 96, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: lightShimmer 3s infinite alternate; /* Efek cahaya berkilau */
+}
+
+@keyframes lightShimmer {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 30px rgba(0, 255, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+    }
+}
+
+section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #a2ebbe;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+input, button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+input {
+    background-color: #ebffcd;
+    color: #2c3e50;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #16a085;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #87d857;
+    transform: scale(1.05);
+}
+
+#backBtn {
+    position: fixed;
+    max-width: 80px;
+    bottom: 20px;
+    left: 20px;
+    background-color: #16a085;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+#backBtn:hover {
+    background-color: #87d857;
+    transform: scale(1.05);
+ }
+
+.output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(236, 240, 241, 0.8);
+    color: #2c3e50;
+    border-radius: 4px;
+    border: 1px solid #bdc3c7;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0));
+    animation: pulse 5s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}

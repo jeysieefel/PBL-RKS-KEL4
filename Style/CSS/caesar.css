@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://i.pinimg.com/originals/8f/f3/bd/8ff3bdc1dd7b8ccb411e63ea24f69074.gif') no-repeat center center fixed; /* GIF as background */
+    background-size: cover;
+    color: #2e7d32; /* Dark green */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Keep the header at the top */
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #456647; /* Forest green */
+    color: rgb(218, 248, 209);
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideDown 1s ease-out; /* Slide down animation */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: glow 2s infinite alternate; /* Glow effect */
+  }
+  
+  header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+  }
+  
+  /* Main Container */
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Fill the remaining vertical space */
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 700px;
+    width: 90%;
+    padding: 30px;
+    background-color: #81ca8d;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out; /* Fade in animation */
+  }
+  
+  /* Inputs and Buttons */
+  textarea, input {
+    width: 96%;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #c4f5c3;
+    border: 2px solid #4caf50; /* Green border */
+    border-radius: 8px;
+    font-size: 1.2em;
+    resize: none;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth focus effect */
+  }
+  
+  textarea#outputText {
+    background-color:  #c4f5c3; /* Very light green */
+  }
+  
+  textarea:focus, input:focus {
+    border-color: #1b5e20; /* Forest green */
+    box-shadow: 0 0 10px 2px #66bb6a; /* Green glow on focus */
+  }
+  
+  button {
+    background-color: #388e3c; /* Medium green */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.2s, box-shadow 0.3s; /* Smooth hover animation */
+  }
+  
+  button:hover {
+    background-color: #eec200; /* Darker green */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 15px 2px #737500; /* Glow effect on hover */
+  }
+  
+  button:active {
+    background-color: #1b5e20; /* Forest green */
+    transform: scale(1); /* Reset scale */
+  }
+
+  #backBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #388e3c; /* Medium green */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.2s, box-shadow 0.3s;
+    animation: fadeIn 1.5s ease-out;
+  }
+
+  #backBtn:hover {
+    background-color: #eec200;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 2px #737500;
+  }
+
+  #backBtn:active {
+    background-color: #1b5e20;
+    transform: scale(1);
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #81c784, 0 0 10px #81c784, 0 0 15px #66bb6a;
+    }
+    to {
+      text-shadow: 0 0 10px #a5d6a7, 0 0 20px #a5d6a7, 0 0 30px #81c784;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2em;
+    }
+  
+    header p {
+      font-size: 1em;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    textarea, input {
+      font-size: 1em;
+      padding: 12px;
+    }
+  
+    button {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8em;
+    }
+  
+    header p {
+      font-size: 0.9em;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    textarea, input {
+      font-size: 0.9em;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }
+  
